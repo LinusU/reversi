@@ -1,0 +1,37 @@
+
+coin(c)
+  background-color c
+  transform scale(1)
+
+.reversi-board
+  overflow hidden
+  border-top 1px solid #090
+  border-left 1px solid #090
+  background #9F9
+  width 512px
+  .reversi-row
+    height 63px
+    border-bottom 1px solid #090
+    overflow hidden
+  .reversi-cell
+    height 63px
+    width 63px
+    border-right 1px solid #090
+    position relative
+    float left
+    .reversi-coin
+      position absolute
+      left 12px
+      top 12px
+      width 40px
+      height 40px
+      border-radius 40px
+      box-shadow 0 0 8px rgba(0,0,0, .4)
+      transform scale(0)
+      transform-origin 20px 20px
+      transition background 200ms linear
+  .reversi-coin-0 .reversi-coin
+    coin black
+  .reversi-coin-1 .reversi-coin
+    coin white
+
